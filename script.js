@@ -63,42 +63,42 @@ function updateStopwatchDisplay() {
 }
 
 
-// Timer functionality
-let timerInterval;
-let timerRunning = false;
-let timerMilliseconds = 0;
+// // Timer functionality
+// let timerInterval;
+// let timerRunning = false;
+// let timerMilliseconds = 0;
 
-const timerDisplay = document.getElementById('timer');
+// const timerDisplay = document.getElementById('timer');
 
-document.getElementById('startTimer').addEventListener('click', function() {
-    if (!timerRunning) {
-        timerRunning = true;
-        timerInterval = setInterval(updateTimer, 10); // Update every 10 milliseconds
-    }
-});
+// document.getElementById('startTimer').addEventListener('click', function() {
+//     if (!timerRunning) {
+//         timerRunning = true;
+//         timerInterval = setInterval(updateTimer, 10); // Update every 10 milliseconds
+//     }
+// });
 
-document.getElementById('pauseTimer').addEventListener('click', function() {
-    clearInterval(timerInterval);
-    timerRunning = false;
-});
+// document.getElementById('pauseTimer').addEventListener('click', function() {
+//     clearInterval(timerInterval);
+//     timerRunning = false;
+// });
 
-document.getElementById('resetTimer').addEventListener('click', function() {
-    clearInterval(timerInterval);
-    timerRunning = false;
-    timerMilliseconds = 0;
-    updateTimerDisplay();
-});
+// document.getElementById('resetTimer').addEventListener('click', function() {
+//     clearInterval(timerInterval);
+//     timerRunning = false;
+//     timerMilliseconds = 0;
+//     updateTimerDisplay();
+// });
 
-function updateTimer() {
-    timerMilliseconds++;
-    updateTimerDisplay();
-}
+// function updateTimer() {
+//     timerMilliseconds++;
+//     updateTimerDisplay();
+// }
 
-function updateTimerDisplay() {
-    const milliseconds = timerMilliseconds % 1000;
-    const seconds = Math.floor(timerMilliseconds / 1000) % 60;
-    const minutes = Math.floor(timerMilliseconds / (1000 * 60)) % 60;
-    const hours = Math.floor(timerMilliseconds / (1000 * 60 * 60));
+// function updateTimerDisplay() {
+//     const milliseconds = timerMilliseconds % 1000;
+//     const seconds = Math.floor(timerMilliseconds / 1000) % 60;
+//     const minutes = Math.floor(timerMilliseconds / (1000 * 60)) % 60;
+//     const hours = Math.floor(timerMilliseconds / (1000 * 60 * 60));
 
-    timerDisplay.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}.${milliseconds.toString().padStart(3, '0')}`;
-}
+//     timerDisplay.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}.${milliseconds.toString().padStart(3, '0')}`;
+// }
