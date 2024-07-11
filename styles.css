@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.clock, .stopwatch, .timer {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.clock h2, .stopwatch h2 {
+    color: #333;
+}
+
+.clock-display {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.clock-face {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    margin: 0 auto;
+}
+
+.clock-face::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hour-hand, .minute-hand, .second-hand {
+    position: absolute;
+    background-color: #333;
+    transform-origin: center bottom;
+}
+
+.hour-hand {
+    width: 4px;
+    height: 50px;
+    top: 50px;
+    left: 98px;
+}
+
+.minute-hand {
+    width: 3px;
+    height: 80px;
+    top: 20px;
+    left: 98.5px;
+}
+
+.second-hand {
+    width: 2px;
+    height: 100px;
+    top: 0;
+    left: 99px;
+}
+
+.stopwatch-display, .timer-display{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.stopwatch-controls, .timer-controls {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}

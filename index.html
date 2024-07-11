@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer and Stopwatch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <h2>Clock</h2>
+            <div class="clock-display">
+                <div class="clock-face">
+                    <div class="hour-hand" id="hourHand"></div>
+                    <div class="minute-hand" id="minuteHand"></div>
+                    <div class="second-hand" id="secondHand"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="timer">
+            <h2>Timer</h2>
+            <div class="timer-display">
+                <span id="timer">00:00:00</span>
+            </div>
+            <div class="timer-controls">
+                <button id="startTimer">Start</button>
+                <button id="pauseTimer">Pause</button>
+                <button id="resetTimer">Reset</button>
+            </div>
+        </div>
+
+        <div class="stopwatch">
+            <h2>Stopwatch</h2>
+            <div class="stopwatch-display">
+                <span id="stopwatch">00:00:00.000</span>
+            </div>
+            <div class="stopwatch-controls">
+                <button id="startStopwatch">Start</button>
+                <button id="pauseStopwatch">Pause</button>
+                <button id="resetStopwatch">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
